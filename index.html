@@ -125,11 +125,12 @@ transform:scale(1);
 
 const no=document.getElementById("no");
 const yes=document.getElementById("yes");
+no.addEventListener("click", () => {
+    no.innerText = "Yes 💖";
+    no.style.background = "#ff69b4";
+    no.style.color = "white";
 
-no.addEventListener("mouseover",()=>{
-no.innerText="Yes 💖";
-no.style.background="#ff69b4";
-no.style.color="white";
+    setTimeout(showFinal, 400);
 });
 
 no.addEventListener("click",showFinal);
