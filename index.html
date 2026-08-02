@@ -120,17 +120,11 @@ transform:scale(1);
 </div>
 
 </div>
-
 <script>
 
-const no=document.getElementById("no");
-const yes=document.getElementById("yes");
-no.addEventListener("click", () => {
-    no.innerText = "Yes 💖";
-    no.style.background = "#ff69b4";
-    no.style.color = "white";
+const no = document.getElementById("no");
+const yes = document.getElementById("yes");
 
-    setTimeout(showFinal, 400);
 no.addEventListener("click", () => {
 
     no.innerText = "Yes 💖";
@@ -145,26 +139,27 @@ no.addEventListener("click", () => {
     }, 2500);
 
 });
-yes.addEventListener("click",showFinal);
 
-function showFinal(){
-document.body.innerHTML=`
-<div class="container">
-<h1>Now you're mine ✨🎊</h1>
-<p>I promise to keep you forever ❤️</p>
-<p> kawter love u so much💋</p>
-<div style="font-size:65px;margin-top:20px;">💖💍♾️</div>
-</div>
-`;
+yes.addEventListener("click", showFinal);
 
-for(let i=0;i<40;i++){
-let h=document.createElement("div");
-h.className="hearts";
-h.innerHTML=Math.random()>0.5?"💖":"✨";
-h.style.left=Math.random()*100+"vw";
-h.style.animationDuration=(3+Math.random()*3)+"s";
-document.body.appendChild(h);
-}
+function showFinal() {
+    document.body.innerHTML = `
+    <div class="container">
+        <h1>Now you're mine ✨🎊</h1>
+        <p>I promise to keep you forever ❤️</p>
+        <p>Kawter loves you so much 💋</p>
+        <div style="font-size:65px;margin-top:20px;">💖💍♾️</div>
+    </div>
+    `;
+
+    for (let i = 0; i < 40; i++) {
+        let h = document.createElement("div");
+        h.className = "hearts";
+        h.innerHTML = Math.random() > 0.5 ? "💖" : "✨";
+        h.style.left = Math.random() * 100 + "vw";
+        h.style.animationDuration = (3 + Math.random() * 3) + "s";
+        document.body.appendChild(h);
+    }
 }
 
 </script>
