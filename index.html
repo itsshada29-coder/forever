@@ -131,9 +131,20 @@ no.addEventListener("click", () => {
     no.style.color = "white";
 
     setTimeout(showFinal, 400);
-});
+no.addEventListener("click", () => {
 
-no.addEventListener("click",showFinal);
+    no.innerText = "Yes 💖";
+    no.style.background = "#ff69b4";
+    no.style.color = "white";
+
+    no.disabled = true;
+    yes.disabled = true;
+
+    setTimeout(() => {
+        showFinal();
+    }, 2500);
+
+});
 yes.addEventListener("click",showFinal);
 
 function showFinal(){
