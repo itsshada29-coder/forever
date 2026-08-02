@@ -124,21 +124,21 @@ transform:scale(1);
 
 const no = document.getElementById("no");
 const yes = document.getElementById("yes");
-
 no.addEventListener("click", () => {
 
-    no.innerText = "Yes 💖";
+    no.textContent = "Yes 💖";
     no.style.background = "#ff69b4";
     no.style.color = "white";
 
-    no.disabled = true;
-    yes.disabled = true;
+    yes.style.display = "none";
 
-    setTimeout(() => {
-        showFinal();
-    }, 2500);
+    document.querySelector("h1").textContent = "Good choice 💕";
+    document.querySelector("p").textContent = "Loading...";
+
+    setTimeout(showFinal, 3000);
 
 });
+
 
 yes.addEventListener("click", showFinal);
 
